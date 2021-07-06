@@ -10,8 +10,8 @@ const Home = () => {
     ]);
 
    return (
-        <div className="home" blogs={blogs}>
-          <BlogList></BlogList>
+        <div className="home">
+          <BlogList blogs={blogs} title="All blogs"></BlogList>
         </div>
     );
 }
