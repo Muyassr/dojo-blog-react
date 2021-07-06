@@ -9,10 +9,15 @@ const Home = () => {
         {title: 'tit3', body:'sksksk3', author: 'Moyasr', id:'3'}
     ]);
 
+    let deleteBlog = (blogId) => {
+        let newBlogs = blogs.filter(x=>x.id!=blogId);
+        setBlogs(newBlogs);
+    }
+
    return (
         <div className="home">
-          <BlogList blogs={blogs} title="All blogs"></BlogList>
-          <BlogList blogs={blogs.filter(blogX=>blogX.author=='Moyasr')} title="Moyasr's blogs"></BlogList>
+            <BlogList blogs={blogs} title="All blogs" deleteBlog={deleteBlog}></BlogList>
+            <BlogList blogs={blogs.filter(blogX=>blogX.author=='Moyasr')} title="Moyasr's blogs" deleteBlog={deleteBlog}></BlogList>
         </div>
     );
 }
