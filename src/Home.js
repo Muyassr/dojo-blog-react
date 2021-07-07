@@ -24,7 +24,7 @@ const Home = () => {
            });
        }, 1000); 
     },[]);
-
+// heeeee
    return (
         <div className="home">
             {error && <div>{error}</div>}
